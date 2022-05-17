@@ -18,10 +18,11 @@ class RangeSlider extends Field
     /**
      * Sets the step value
      *
-     * @param integer $step
+     * @param int $step
      * @return self
      */
-    public function step(int $step): self {
+    public function step(int $step): self
+    {
         $this->step = $step;
 
         return $this;
@@ -30,10 +31,11 @@ class RangeSlider extends Field
     /**
      * Sets the min value
      *
-     * @param integer $min
+     * @param int $min
      * @return self
      */
-    public function min(int $min): self {
+    public function min(int $min): self
+    {
         $this->min = $min;
 
         return $this;
@@ -42,10 +44,11 @@ class RangeSlider extends Field
     /**
      * Sets the max value
      *
-     * @param integer $max
+     * @param int $max
      * @return self
      */
-    public function max(int $max): self {
+    public function max(int $max): self
+    {
         $this->max = $max;
 
         return $this;
@@ -55,10 +58,11 @@ class RangeSlider extends Field
      * Sets the displays steps value.
      * If tru the steps list should be listed in the form.
      *
-     * @param boolean $displaySteps
+     * @param bool $displaySteps
      * @return self
      */
-    public function displaySteps(bool $displaySteps = true) : self {
+    public function displaySteps(bool $displaySteps = true): self
+    {
         $this->displaySteps = $displaySteps;
 
         return $this;
@@ -68,43 +72,44 @@ class RangeSlider extends Field
      * Sets the steps value.
      *
      * @param array $steps
-     * @param boolean|null $sort
+     * @param bool|null $sort
      * @return self
      */
-    public function steps(array $steps, ?bool $sort = null): self {
+    public function steps(array $steps, ?bool $sort = null): self
+    {
         $stepsAssoc = Arr::isAssoc($steps);
         $sort = $sort !== null ? $sort : $stepsAssoc;
         $this->steps = ($sort) ? Arr::sort($steps) : $steps;
-        $min  = $stepsAssoc ? array_key_first($this->steps) : 1;
-        $max  = $stepsAssoc ? array_key_last($this->steps) : sizeof($this->steps);
+        $min = $stepsAssoc ? array_key_first($this->steps) : 1;
+        $max = $stepsAssoc ? array_key_last($this->steps) : sizeof($this->steps);
 
         return $this->min($min)
                     ->max($max)
                     ->step($min);
     }
 
-    public function getMin() : ?int {
-
+    public function getMin(): ?int
+    {
         return $this->min;
     }
 
-    public function getMax() : ?int {
-
+    public function getMax(): ?int
+    {
         return $this->max;
     }
 
-    public function getSteps() : array {
-
+    public function getSteps(): array
+    {
         return $this->steps ?? [];
     }
 
-    public function getStep(): int {
-
+    public function getStep(): int
+    {
         return $this->step;
     }
 
-    public function getDisplaySteps(): bool {
-
+    public function getDisplaySteps(): bool
+    {
         return $this->displaySteps;
     }
 }

@@ -1,22 +1,22 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "yepsua/filament-range-field",
+    "description": "The missing range/slider field for the Filament forms.",
     "keywords": [
-        ":vendor_name",
+        "yepsua",
         "laravel",
-        ":package_slug"
+        "filament-range-field"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/yepsua/filament-range-field",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Omar Yepez",
+            "email": "oyepez003@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.0",
         "spatie/laravel-package-tools": "^1.9.2",
         "illuminate/contracts": "^9.0"
     },
@@ -34,13 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Yepsua\\Filament\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Yepsua\\Filament\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,11 +53,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
+                "Yepsua\\Filament\\FilamentRangeFieldServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

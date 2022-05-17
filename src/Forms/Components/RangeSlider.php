@@ -115,7 +115,8 @@ class RangeSlider extends Field
         return $this->evaluate($this->displaySteps);
     }
 
-    public function getStepsAssoc(): bool {
+    public function getStepsAssoc(): bool
+    {
         return $this->stepsAssoc;
     }
 }

@@ -14,7 +14,7 @@ class TestCase extends Orchestra
         return [
             LivewireServiceProvider::class,
             FilamentServiceProvider::class,
-            FilamentRangeFieldServiceProvider::class
+            FilamentRangeFieldServiceProvider::class,
         ];
     }
 }

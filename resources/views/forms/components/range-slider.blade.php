@@ -28,16 +28,9 @@
         @if (($steps = $getSteps()) && $getDisplaySteps() === true)
         <ul class="flex justify-between w-full px-[10px]">
             @foreach ($steps as $step)
-                <li @click="state = {{ $loop->iteration }}">
-                    <span
-                        class="cursor-pointer text-xs hover:text-primary-500 dark:hover:text-primary-500 font-medium leading-4 text-gray-700 dark:text-gray-300"
-                        x-bind:class="{
-                            'dark:text-primary-500 text-primary-500': state === {{ $loop->iteration }},
-                        }"
-                    >
-                        {{ $step }}
-                    </span>
-                </li>
+                @include('filament-range-field::forms.components._range-slider-step', [
+                    'state' => $getStepsAssoc() ? $step : $loop->iteration
+                ])
             @endforeach
         </ul>
         @endif

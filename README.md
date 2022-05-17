@@ -17,6 +17,12 @@ You can install the package via composer:
 composer require yepsua/filament-range-field
 ```
 
+Publish the assets:
+
+```bash
+php artisan vendor:publish --tag="filament-range-field-assets"
+```
+
 Optionally, you can publish the views using
 
 ```bash

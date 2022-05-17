@@ -5,6 +5,9 @@ parameters:
     level: 4
     paths:
         - src
+    excludePaths:
+        analyse:
+            - src/FilamentRangeFieldServiceProvider.php
     tmpDir: build/phpstan
     checkOctaneCompatibility: true
     checkModelProperties: true

@@ -12,6 +12,7 @@ class RangeSlider extends Field
     protected int  | Closure | null $max = null;
     protected int  | Closure | null $step = 1;
     protected bool | Closure $displaySteps = true;
+    protected bool $stepsAssoc = false;
     protected array $steps = [];
 
     protected string $view = 'filament-range-field::forms.components.range-slider';
@@ -78,11 +79,11 @@ class RangeSlider extends Field
      */
     public function steps(array $steps, ?bool $sort = null): self
     {
-        $stepsAssoc = Arr::isAssoc($steps);
-        $sort = $sort !== null ? $sort : $stepsAssoc;
+        $this->stepsAssoc = Arr::isAssoc($steps);
+        $sort = $sort !== null ? $sort : $this->stepsAssoc;
         $this->steps = ($sort) ? Arr::sort($steps) : $steps;
-        $min = $stepsAssoc ? array_key_first($this->steps) : 1;
-        $max = $stepsAssoc ? array_key_last($this->steps) : sizeof($this->steps);
+        $min = $this->stepsAssoc ? array_key_first($this->steps) : 1;
+        $max = $this->stepsAssoc ? array_key_last($this->steps) : sizeof($this->steps);
 
         return $this->min($min)
                     ->max($max)
@@ -112,5 +113,9 @@ class RangeSlider extends Field
     public function getDisplaySteps(): bool
     {
         return $this->evaluate($this->displaySteps);
+    }
+
+    public function getStepsAssoc(): bool {
+        return $this->stepsAssoc;
     }
 }

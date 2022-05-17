@@ -17,6 +17,6 @@ class FilamentRangeFieldServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('filament-range-field')
-            ->hasViews()
+            ->hasViews();
     }
 }

@@ -38,6 +38,8 @@ use Yepsua\Filament\Forms\Components\RangeSlider
 ...
 ```
 
+[](https://user-images.githubusercontent.com/1541517/168742559-97297ba2-af11-4742-b388-f9fcef0cfa78.png)
+
 Defining the steps:
 
 ```php

@@ -5,7 +5,9 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/yepsua/filament-range-field/Check%20&%20fix%20styling?label=code%20style)](https://github.com/yepsua/filament-range-field/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/yepsua/filament-range-field.svg?style=flat-square)](https://packagist.org/packages/yepsua/filament-range-field)
 
+<p align="center">
 ![Range](https://user-images.githubusercontent.com/1541517/168745619-aeb1370a-e8a9-4d14-bf1e-a45fcae9078b.png)
+</p>
 
 ## Installation
 

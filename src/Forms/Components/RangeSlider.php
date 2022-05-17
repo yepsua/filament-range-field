@@ -2,16 +2,17 @@
 
 namespace Yepsua\Filament\Forms\Components;
 
+use Closure;
 use Filament\Forms\Components\Field;
 use Illuminate\Support\Arr;
 
 class RangeSlider extends Field
 {
-    protected ?int $min = null;
-    protected ?int $max = null;
-    protected ?int $step = 1;
+    protected int  | Closure | null $min = null;
+    protected int  | Closure | null $max = null;
+    protected int  | Closure | null $step = 1;
+    protected bool | Closure $displaySteps = true;
     protected array $steps = [];
-    protected bool $displaySteps = true;
 
     protected string $view = 'filament-range-field::forms.components.range-slider';
 
@@ -21,7 +22,7 @@ class RangeSlider extends Field
      * @param int $step
      * @return self
      */
-    public function step(int $step): self
+    public function step(int | Closure $step): self
     {
         $this->step = $step;
 
@@ -34,7 +35,7 @@ class RangeSlider extends Field
      * @param int $min
      * @return self
      */
-    public function min(int $min): self
+    public function min(int | Closure $min): self
     {
         $this->min = $min;
 
@@ -47,7 +48,7 @@ class RangeSlider extends Field
      * @param int $max
      * @return self
      */
-    public function max(int $max): self
+    public function max(int | Closure $max): self
     {
         $this->max = $max;
 
@@ -61,7 +62,7 @@ class RangeSlider extends Field
      * @param bool $displaySteps
      * @return self
      */
-    public function displaySteps(bool $displaySteps = true): self
+    public function displaySteps(bool | Closure $displaySteps = true): self
     {
         $this->displaySteps = $displaySteps;
 
@@ -90,12 +91,12 @@ class RangeSlider extends Field
 
     public function getMin(): ?int
     {
-        return $this->min;
+        return $this->evaluate($this->min);
     }
 
     public function getMax(): ?int
     {
-        return $this->max;
+        return $this->evaluate($this->max);
     }
 
     public function getSteps(): array
@@ -105,11 +106,11 @@ class RangeSlider extends Field
 
     public function getStep(): int
     {
-        return $this->step;
+        return $this->evaluate($this->step);
     }
 
     public function getDisplaySteps(): bool
     {
-        return $this->displaySteps;
+        return $this->evaluate($this->displaySteps);
     }
 }

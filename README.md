@@ -6,7 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/yepsua/filament-range-field.svg?style=flat-square)](https://packagist.org/packages/yepsua/filament-range-field)
 
 <p align="center">
-![Range](https://user-images.githubusercontent.com/1541517/168745619-aeb1370a-e8a9-4d14-bf1e-a45fcae9078b.png)
+  <img src="https://user-images.githubusercontent.com/1541517/168745619-aeb1370a-e8a9-4d14-bf1e-a45fcae9078b.png" />
 </p>
 
 ## Installation
@@ -42,7 +42,9 @@ use Yepsua\Filament\Forms\Components\RangeSlider
 ...
 ```
 
-![Range](https://user-images.githubusercontent.com/1541517/168742559-97297ba2-af11-4742-b388-f9fcef0cfa78.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1541517/168742559-97297ba2-af11-4742-b388-f9fcef0cfa78.png" />
+</p>
 
 Defining the steps:
 
@@ -66,7 +68,9 @@ use Yepsua\Filament\Forms\Components\RangeSlider
 ...
 ```
 
-![Range](https://user-images.githubusercontent.com/1541517/168742589-87859e0b-dd9e-46df-a5da-244f6b7e8e6d.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1541517/168742589-87859e0b-dd9e-46df-a5da-244f6b7e8e6d.png" />
+</p>
 
 ### Associative Array:
 
@@ -89,7 +93,10 @@ use Yepsua\Filament\Forms\Components\RangeSlider
     }
 ...
 ```
-![Range](https://user-images.githubusercontent.com/1541517/168742589-87859e0b-dd9e-46df-a5da-244f6b7e8e6d.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1541517/168742589-87859e0b-dd9e-46df-a5da-244f6b7e8e6d.png" />
+</p>
 
 ### Hide the Step List:
 
@@ -126,8 +133,9 @@ use Yepsua\Filament\Forms\Components\RangeSlider
     ...
 ```
 
-![Screenshot 2022-05-17 at 01-43-39 App Seetings - App Test](https://user-images.githubusercontent.com/1541517/168746120-1dfe2a03-86d9-4dca-8068-a3e71b9937f4.png)
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1541517/168746120-1dfe2a03-86d9-4dca-8068-a3e71b9937f4.png" />
+</p>
 
 The same case applies for the *min* and *max* setters:
 

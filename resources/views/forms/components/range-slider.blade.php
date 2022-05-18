@@ -27,9 +27,10 @@
 
         @if (($steps = $getSteps()) && $getDisplaySteps() === true)
         <ul class="flex justify-between w-full px-[10px]">
-            @foreach ($steps as $step)
+            @foreach ($steps as $key => $step)
                 @include('filament-range-field::forms.components._range-slider-step', [
-                    'state' => $getStepsAssoc() ? $step : $loop->iteration
+                    'state' => $getStepsAssoc() ? $key : $loop->iteration,
+                    'step' => $step
                 ])
             @endforeach
         </ul>

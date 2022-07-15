@@ -90,12 +90,18 @@ class RangeSlider extends Field
                     ->step($min);
     }
 
-    public function getMin(): ?int
+    /**
+     * @return mixed null | int | float
+     */
+    public function getMin(): mixed
     {
         return $this->evaluate($this->min);
     }
 
-    public function getMax(): ?int
+    /**
+     * @return mixed null | int | float
+     */
+    public function getMax(): mixed
     {
         return $this->evaluate($this->max);
     }

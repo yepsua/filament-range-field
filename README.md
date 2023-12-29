@@ -20,7 +20,18 @@ composer require yepsua/filament-range-field
 Publish the assets:
 
 ```bash
-php artisan vendor:publish --tag="filament-range-field-assets"
+php artisan filament:assets
+```
+
+You must see something like in the console:
+
+```bash
+php artisan filament:assets
+
+...
+public/css/yepsua/filament-range-field/range-input-component.css 
+...
+
 ```
 
 Optionally, you can publish the views using

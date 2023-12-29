@@ -20,30 +20,30 @@
     appearance: none;
     width: 1.25rem;
     height: 1.25rem;
-    background: rgb(var(--color-primary-600) / var(--tw-bg-opacity));
+    background-color: rgba(var(--primary-600) , var(--tw-bg-opacity));
     cursor: pointer;
     border-radius: 50%;
-    border: 1px solid rgb(var(--color-primary-300) / var(--tw-bg-opacity))
+    border-color: 1px solid rgba(var(--primary-300) , var(--tw-bg-opacity))
 }
 
 .filament-forms-range-component::-moz-range-thumb {
-    background: rgb(var(--color-primary-600) / var(--tw-bg-opacity));
+    background-color: rgba(var(--primary-600) , var(--tw-bg-opacity));
     cursor: pointer;
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 50%;
     border: 2px solid;
-    border-color: rgb(var(--color-primary-300) / var(--tw-bg-opacity))
+    border-color: rgba(var(--primary-300) , var(--tw-bg-opacity))
 }
 
 .filament-forms-range-component:focus::-webkit-slider-thumb {
-    background: rgb(var(--color-primary-400) / var(--tw-bg-opacity));
-    border-color: rgb(var(--color-primary-600) / var(--tw-bg-opacity))
+    background-color: rgba(var(--primary-400) , var(--tw-bg-opacity));
+    border-color: rgba(var(--primary-600) , var(--tw-bg-opacity))
 }
 
 .filament-forms-range-component:focus::-moz-range-thumb {
-    background: rgb(var(--color-primary-400) / var(--tw-bg-opacity));
-    border-color: rgb(var(--color-primary-600) / var(--tw-bg-opacity))
+    background-color: rgba(var(--primary-400) , var(--tw-bg-opacity));
+    border-color: rgba(var(--primary-600) , var(--tw-bg-opacity))
 }
 
 .filament-forms-range-component:disabled::-webkit-slider-thumb {

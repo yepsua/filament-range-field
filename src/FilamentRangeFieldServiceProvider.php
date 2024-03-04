@@ -2,7 +2,6 @@
 
 namespace Yepsua\Filament;
 
-use Filament\Facades\Filament;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
 use Spatie\LaravelPackageTools\Package;
@@ -28,7 +27,7 @@ class FilamentRangeFieldServiceProvider extends PackageServiceProvider
     {
         FilamentAsset::register([
             Css::make(
-                'range-input-component', 
+                'range-input-component',
                 __DIR__ . '/../resources/dist/css/filament-forms-range-component.min.css'
             ),
         ], package: 'yepsua/filament-range-field');
